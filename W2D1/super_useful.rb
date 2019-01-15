@@ -15,7 +15,14 @@ def reaction(maybe_fruit)
   else 
     raise StandardError
   end 
-  
+  rescue
+    if maybe_fruit=="coffee"
+      puts "choose another fruit"
+      maybe_fruit = gets.chomp
+      retry 
+    else 
+      puts "not a valid fruit"
+    end
 end
 
 def feed_me_a_fruit
@@ -46,4 +53,3 @@ class BestFriend
     puts "Hey bestie, I made you a friendship bracelet. It says my name, #{@name}, so you never forget me." 
   end
 end
-

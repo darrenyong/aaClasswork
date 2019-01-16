@@ -1,9 +1,6 @@
 body {
-  font-family: "Arial", "sans-serif"
-}
-
-header > img {
-  width: 100px
+  font-family: "Arial", "sans-serif";
+  background-color: #E5E9EB
 }
 
 h1 {
@@ -15,9 +12,18 @@ h2 {
 }
 
 .ingredients-list {
-  list-style: square inside
+  list-style: square inside;
 }
 
-.directions {
-  list-style: square inside
+ol {
+  list-style: lower-alpha inside;
+}
+
+header > img {
+  width: 100px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: inherit;
 }

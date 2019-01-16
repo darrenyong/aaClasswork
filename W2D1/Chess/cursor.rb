@@ -86,6 +86,9 @@ class Cursor
   end
 
   def update_pos(diff)
-
+    @cursor_pos.each_index do |idx|
+      new_idx = @cursor_pos[idx] + diff[idx]
+      @cursor_pos[idx] = new_idx unless new_idx <0
+    end
   end
 end

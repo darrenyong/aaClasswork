@@ -21,6 +21,15 @@ class Board
     end
   end
 
+  def move_piece(start_pos, end_pos)
+    raise NoPieceOnStart if self[start_pos].is_a?(NullPiece)
+    raise EndPosOccupied unless self[end_pos].is_a?(NullPiece)
+    target_piece = self[start_pos]  # Instance of piece
+    target_piece.pos = end_pos
+    self[end_pos] = target_piece
+    self[start_pos] = sentinel
+  end
+
   def [](pos)
     @chess_board[pos[0]][pos[1]]
   end

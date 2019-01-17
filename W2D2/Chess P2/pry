@@ -1,0 +1,23 @@
+load 'Chess/modules.rb'
+load 'Chess/board.rb'
+load 'Chess/display.rb'
+load 'Chess/piece.rb'
+
+
+b = Board.new
+d = Display.new(b)
+d.render
+r = Rook.new([3,4], :r, b, :light_black)
+bis = Bishop.new([2,0], :bis, b)
+q = Queen.new([2,1], :q, b)
+kn = Knight.new([3,3], :kn, b)
+k = King.new([3, 4], :k, b)
+b.move_piece([6,4], [5,7])
+b.move_piece([0,3], [2,4])
+b[[2,4]].moves
+b.in_check?(:light_white)
+
+b.move_piece([6,5], [5,5])
+b.move_piece([1,4], [3,4])
+b.move_piece([6,6], [4,6])
+b.move_piece([0,3], [4,7])

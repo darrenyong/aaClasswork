@@ -48,6 +48,22 @@ ol {
 input[type="radio"] {
   cursor: pointer;
   outline: none;
+  -webkit-appearance: none;
+  background-image:url(./stars.png);
+  width: 30px;
+  height: 30px;
+}
+
+input[type="radio"]:hover{
+  background-position: 30px 30px
+}
+
+input[tuype="aradio"]:checked {
+  background-position: 20px 20px
+}
+
+input:last-child{
+  background:gold
 }
 
 select {
@@ -60,4 +76,6 @@ input[type="submit"] {
   outline: none;
 }
 
-input:last-child{background:gold}
+h2+.user_review {
+  border-top:1px solid #000;
+}

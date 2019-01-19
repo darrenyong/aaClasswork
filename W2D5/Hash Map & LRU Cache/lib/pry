@@ -1,0 +1,3 @@
+load "lib/p01_int_set.rb"
+
+set = IntSet.new(20)

@@ -15,7 +15,9 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-
+    logout!
+    render json: "You've logged out!"
+    # redirect_to new_session_url
   end
 
 end

@@ -401,3 +401,166 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 19ms (Views: 15.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/users/new" for 127.0.0.1 at 2019-01-31 11:34:44 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (281.3ms)
+Completed 500 Internal Server Error in 307ms (ActiveRecord: 8.6ms)
+
+
+
+NameError - undefined local variable or method `user' for #<#<Class:0x00007feb3a204f40>:0x00007feb39bf34a8>
+Did you mean?  @user:
+  app/views/users/new.html.erb:5:in `_app_views_users_new_html_erb__2224432837338632217_70324134620060'
+
+Started POST "/__better_errors/8c0eaee9f02cd908/variables" for 127.0.0.1 at 2019-01-31 11:34:45 -0800
+Started GET "/users/new" for 127.0.0.1 at 2019-01-31 11:34:53 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 27ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-01-31 11:35:22 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-01-31 11:35:35 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-31 11:35:36 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>""}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/cf3394fcd97aa10f/variables" for 127.0.0.1 at 2019-01-31 11:35:36 -0800
+Started POST "/users" for 127.0.0.1 at 2019-01-31 11:35:47 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"contact.darrenyong@gmail.com"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/569190f1402acae5/variables" for 127.0.0.1 at 2019-01-31 11:35:47 -0800
+Started GET "/users/new" for 127.0.0.1 at 2019-01-31 11:36:13 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-01-31 11:36:14 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-01-31 11:37:18 -0800
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/darrenyong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 197ms (Views: 173.3ms | ActiveRecord: 8.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-31 11:37:22 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"d@d.com"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/4e4f1a6b0ef29015/variables" for 127.0.0.1 at 2019-01-31 11:37:22 -0800
+Started POST "/users" for 127.0.0.1 at 2019-01-31 11:38:12 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"d@d.com"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/72a8ca1ac271c7e4/variables" for 127.0.0.1 at 2019-01-31 11:38:12 -0800
+Started POST "/users" for 127.0.0.1 at 2019-01-31 11:38:27 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"d@d.com"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/11d14ef43c7972ee/variables" for 127.0.0.1 at 2019-01-31 11:38:27 -0800
+Started GET "/users/new" for 127.0.0.1 at 2019-01-31 11:38:29 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 29ms (Views: 15.2ms | ActiveRecord: 5.4ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (5.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ghFQcZrnBC1cbhemvdo_hA"], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ghFQcZrnBC1cbhemvdo_hA"], ["LIMIT", 1]]
+  [1m[36mUser Create (4.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "d@d.com"], ["password_digest", "$2a$10$HLa0SwIpozzlk4k1x9Cpu.yzyK0/PXgoFB2e9zY9YlGNtjWhY6pHa"], ["session_token", "ghFQcZrnBC1cbhemvdo_hA"], ["created_at", "2019-01-31 19:39:56.381857"], ["updated_at", "2019-01-31 19:39:56.381857"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users/new" for 127.0.0.1 at 2019-01-31 11:40:19 -0800
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/darrenyong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 191ms (Views: 167.4ms | ActiveRecord: 7.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-31 11:40:21 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"09dkqC6WTY2JtupqAayMkCbuBmNaaaeLMS92dEbkkpgI+6Wxu8wQ5PRURM80QPrmw4UsJ7YUMkPaUZrLxPqFag==", "user"=>{"email"=>""}}
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 118ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-31 11:40:25 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"09dkqC6WTY2JtupqAayMkCbuBmNaaaeLMS92dEbkkpgI+6Wxu8wQ5PRURM80QPrmw4UsJ7YUMkPaUZrLxPqFag==", "user"=>{"email"=>"d@d.com"}}
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 119ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-01-31 11:45:45 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 30ms (Views: 16.2ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-01-31 11:45:55 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+

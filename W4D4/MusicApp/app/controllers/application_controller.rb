@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  helper_method :require_login, :loggedin?
+  helper_method :require_login, :logged_in?
 
 
   def login!(user)

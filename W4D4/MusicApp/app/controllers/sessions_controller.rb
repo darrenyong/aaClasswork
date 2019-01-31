@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     user = User.find_by_credentials(params[:user][:email], params[:user][:password])
     if user
       login!(user)
-      render json: user
+      redirect_to users_url
     else
       flash[:errors] = ["Invalid credentials"]
       redirect_to new_session_url
@@ -16,8 +16,7 @@ class SessionsController < ApplicationController
 
   def destroy
     logout!
-    render json: "You've logged out!"
-    # redirect_to new_session_url
+    redirect_to new_session_url
   end
 
 end

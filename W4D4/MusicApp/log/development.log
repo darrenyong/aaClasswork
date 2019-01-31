@@ -564,3 +564,116 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/users/new" for 127.0.0.1 at 2019-01-31 11:48:20 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 24ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-01-31 11:48:21 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 26ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-31 11:48:25 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"EC8L52HXjzhGpIo+P7CJZG39UrGgLkG26p8bco1QESTLA8r+9I3SUTtGJJsKXP8SiJZ49UxT1H4B4ffND04G1g==", "user"=>{"email"=>"d@d.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 0, expected 1):
+  app/controllers/users_controller.rb:15:in `user_params'
+  app/controllers/users_controller.rb:8:in `create'
+
+Started POST "/__better_errors/ad0b7498217452ba/variables" for 127.0.0.1 at 2019-01-31 11:48:25 -0800
+Started GET "/users/new" for 127.0.0.1 at 2019-01-31 11:48:49 -0800
+
+SyntaxError - syntax error, unexpected keyword_end, expecting ')'
+  end
+  ^~~:
+  app/controllers/users_controller.rb:16:in `'
+
+Started POST "/__better_errors/0e3009c60d1c9d2c/variables" for 127.0.0.1 at 2019-01-31 11:48:49 -0800
+Started GET "/users/new" for 127.0.0.1 at 2019-01-31 11:49:02 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 28ms (Views: 15.2ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-31 11:49:05 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"TFqAiZJ63ht/9DOhv991UziAIHx9Uo4+lWfcLbUexsuXdkGQByCDcgIWnQSKMwMl3esKOJEvG/Z+GTCSNwDROQ==", "user"=>{"email"=>"d@d.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "fjxJXaO-Pqmdx0IwDEak-g"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Create (3.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "d@d.com"], ["password_digest", "$2a$10$olgbApRH0TW1S4JzVkoo8uFv6rZLuDf8Ih8yJ3rtqat5NyXyl5jB6"], ["session_token", "fjxJXaO-Pqmdx0IwDEak-g"], ["created_at", "2019-01-31 19:49:05.900866"], ["updated_at", "2019-01-31 19:49:05.900866"]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 4.7ms)
+
+
+
+PG::UniqueViolation - ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(d@d.com) already exists.
+:
+  app/controllers/users_controller.rb:9:in `create'
+
+Started POST "/__better_errors/406cc0a6b15a0651/variables" for 127.0.0.1 at 2019-01-31 11:49:05 -0800
+Started POST "/users" for 127.0.0.1 at 2019-01-31 11:49:16 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"TFqAiZJ63ht/9DOhv991UziAIHx9Uo4+lWfcLbUexsuXdkGQByCDcgIWnQSKMwMl3esKOJEvG/Z+GTCSNwDROQ==", "user"=>{"email"=>"da@d.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "xZvLIId-4wbkcGkmS50QUA"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "da@d.com"], ["password_digest", "$2a$10$95ofHMtsRYj4EVmvibibBO7OcfMmkmuwGX2uY2NfV3uRFwcP3kqne"], ["session_token", "xZvLIId-4wbkcGkmS50QUA"], ["created_at", "2019-01-31 19:49:16.089445"], ["updated_at", "2019-01-31 19:49:16.089445"]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 175ms (ActiveRecord: 1.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-31 11:49:18 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"TFqAiZJ63ht/9DOhv991UziAIHx9Uo4+lWfcLbUexsuXdkGQByCDcgIWnQSKMwMl3esKOJEvG/Z+GTCSNwDROQ==", "user"=>{"email"=>"da@d.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "cWTRmci26PYW7iKyMOwkDw"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "da@d.com"], ["password_digest", "$2a$10$y7ttjaej5pLt80gv0eCyl.UjE2qwKFgtwtjMAC3pfsQXw7NGilWmK"], ["session_token", "cWTRmci26PYW7iKyMOwkDw"], ["created_at", "2019-01-31 19:49:18.753183"], ["updated_at", "2019-01-31 19:49:18.753183"]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 1.9ms)
+
+
+
+PG::UniqueViolation - ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(da@d.com) already exists.
+:
+  app/controllers/users_controller.rb:9:in `create'
+
+Started POST "/__better_errors/7ee6858b0a8ce464/variables" for 127.0.0.1 at 2019-01-31 11:49:18 -0800
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/users/new" for 127.0.0.1 at 2019-01-31 12:02:11 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 33ms (Views: 17.8ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-01-31 12:02:12 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+

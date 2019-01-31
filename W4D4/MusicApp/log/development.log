@@ -1555,3 +1555,78 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 20ms (Views: 17.4ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/session/new" for 127.0.0.1 at 2019-01-31 14:47:21 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+Completed 200 OK in 20ms (Views: 16.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2019-01-31 14:47:30 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"Yhjy6Pup7mJsWXwk2Ne8cZMO70f94MSdwNLiiGW8S5W5NDPxbvOzCxG70oHtO8oHdmXFAxGdUVUrrA4356JcZw==", "user"=>{"email"=>"darren", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "darren"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:33
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "6p12Sy_fu_u8zFfwE8Qw4g"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/models/user.rb:33
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "6p12Sy_fu_u8zFfwE8Qw4g"], ["updated_at", "2019-01-31 22:47:30.712643"], ["id", 5]]
+  ↳ app/models/user.rb:33
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:33
+Redirected to http://localhost:3000/users
+Completed 302 Found in 64ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-01-31 14:47:30 -0800
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "6p12Sy_fu_u8zFfwE8Qw4g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/session" for 127.0.0.1 at 2019-01-31 14:47:37 -0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vEMllfBZI2wLIiXOQ2gVb7enog4ZqFaj9I1+KSNSA8Jnb+SMZQN+BXbAi2t2hGMZUsyISvXVw2sf85KWoUwUMA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "6p12Sy_fu_u8zFfwE8Qw4g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:33
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "vktiReZ7zS7jqEpEwF7p_A"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/models/user.rb:33
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "vktiReZ7zS7jqEpEwF7p_A"], ["updated_at", "2019-01-31 22:47:37.044588"], ["id", 5]]
+  ↳ app/models/user.rb:33
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:33
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 6ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2019-01-31 14:47:37 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/session" for 127.0.0.1 at 2019-01-31 14:47:37 -0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5byNZbEQw9J8vBXHki66vmPqAiqN6/5wp7ui3IUbcvs+kEx8JEqeuwFeu2KnwszIhoEobmGWa7hMxU5jBwVlCQ=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms)
+
+
+
+NoMethodError - undefined method `reset_session_token' for nil:NilClass:
+  app/controllers/application_controller.rb:14:in `logout!'
+  app/controllers/sessions_controller.rb:18:in `destroy'
+
+Started POST "/__better_errors/2c93f04e4b988ea9/variables" for 127.0.0.1 at 2019-01-31 14:47:37 -0800

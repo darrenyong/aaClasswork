@@ -47,3 +47,15 @@ body {
 .header-list > li:hover {
   background: #000;
 }
+
+.content-sidebar {
+  background: blue;
+  min-height: 200px;
+  width: 100px;
+}
+
+.content-main {
+  background: red;
+  min-height: 200px;
+  width: 100px;
+}

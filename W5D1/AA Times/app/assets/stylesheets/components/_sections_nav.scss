@@ -1,0 +1,22 @@
+.sections {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid $light-gray;
+  padding: 10px 400px;
+  font-family: $sans-serif;
+}
+
+.section-nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-nav a {
+  background-color: $lightest-gray;
+  text-decoration: none;
+}
+
+.section-nav li:last-child {
+  text-transform: uppercase;
+  text-decoration: underline;
+}

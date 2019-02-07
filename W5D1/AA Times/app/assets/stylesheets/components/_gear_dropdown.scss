@@ -1,0 +1,18 @@
+// Use the gear_dropdown.png screenshot as a style guide
+.gear-dropdown-btn {
+  position: relative;
+}
+
+.gear-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 240px;
+  border: 1px solid $light-gray;
+  background: white;
+  padding: 20px;
+  z-index: 1;
+}
+
+.gear-dropdown li ul {
+
+}

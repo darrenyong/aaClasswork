@@ -48,14 +48,22 @@ body {
   background: #000;
 }
 
+.container {
+  display: flex;
+}
+
 .content-sidebar {
   background: blue;
   min-height: 200px;
   width: 100px;
+  padding: 10px;
+  border: 1px solid black;
 }
 
 .content-main {
   background: red;
   min-height: 200px;
   width: 100px;
+  padding: 10px;
+  border: 1px solid black;
 }

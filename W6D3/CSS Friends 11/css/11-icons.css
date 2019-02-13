@@ -8,3 +8,15 @@
   overflow: hidden;
   padding-top: 25px;
 }
+
+.icons-comment {
+  background-position: 0px 0px;
+}
+
+.icon-reblog {
+  background-position: 0px -10px;
+}
+
+.icon-favorite {
+  background-position: 0px -50px;
+}

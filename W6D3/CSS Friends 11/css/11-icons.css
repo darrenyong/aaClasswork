@@ -9,14 +9,26 @@
   padding-top: 25px;
 }
 
-.icons-comment {
+.icon-comment {
   background-position: 0px 0px;
 }
 
 .icon-reblog {
-  background-position: 0px -10px;
+  background-position: 0px -100px;
 }
 
 .icon-favorite {
   background-position: 0px -50px;
+}
+
+.icon-comment:hover {
+  background-position: 0px -25px;
+}
+
+.icon-reblog:hover {
+  background-position: 0px -125px;
+}
+
+.icon-favorite:hover {
+  background-position: 0px -75px;
 }

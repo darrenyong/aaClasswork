@@ -1,1 +1,4 @@
 /* PHASE 11: Icons */
+[class*="icon-"] {
+  background-image: url("../images/sprite.png")
+}

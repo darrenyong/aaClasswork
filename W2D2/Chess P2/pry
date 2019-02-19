@@ -1,7 +1,7 @@
-load 'Chess/modules.rb'
-load 'Chess/board.rb'
-load 'Chess/display.rb'
-load 'Chess/piece.rb'
+load 'modules.rb'
+load 'board.rb'
+load 'display.rb'
+load 'piece.rb'
 
 
 b = Board.new
